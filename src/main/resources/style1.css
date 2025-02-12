@@ -1,0 +1,383 @@
+/* TODO: align the top bar (other knobs a little too) */
+
+.top-bar {
+    -fx-padding: 10px;
+    -fx-font-size: 15px;
+    -fx-translate-x: 42px;
+}
+
+.presets-box {
+    -fx-spacing: 20px;
+    -fx-alignment: bottom_center;
+    -fx-padding: 0px 50px 20px 10px;
+    -fx-border-width: 0px 2px 0px 0px;
+}
+
+.effects-box {
+    -fx-spacing: 20px;
+    -fx-alignment: bottom_center;
+    /*-fx-padding: 0px 45px 20px 45px;*/
+    -fx-padding: 3px 15px 20px 15px;
+    -fx-border-width: 0px 0px 0px 0px;
+}
+
+.devices-box {
+    -fx-spacing: 20px;
+    -fx-alignment: bottom_center;
+    -fx-padding: 0px 10px 20px 50px;
+    -fx-border-width: 0px 0px 0px 2px;
+}
+
+.device-labels-box {
+    -fx-spacing: 170px;
+    -fx-alignment: bottom_center;
+    -fx-padding: 0px 0px 0px 40px;
+}
+
+.presets-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 0px 10px 0px;
+}
+
+.effects-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 3px 10px 0px;
+}
+
+.input-devices-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 0px 10px 0px;
+}
+
+.output-devices-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 0px 10px 0px;
+}
+
+.root {
+    /*-fx-background-image: url('/background.jpg');*/
+    -fx-background-size: stretch;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.controls {
+    -fx-alignment: center;
+    -fx-spacing: 90px;
+    -fx-padding: 250px 0px 300px 0px;
+}
+
+
+.rotatable-circle {
+    -fx-background-image: url("/amp_knob_2.png");
+    -fx-background-size: stretch;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+.button-switch {
+    -fx-alignment: center;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.amp_off {
+    -fx-background-image: url("/amp_off.png"); /* Path to your image */
+    -fx-background-size: stretch;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+.amp_on {
+    -fx-background-image: url("/amp_on.png"); /* Path to your image */
+    -fx-background-size: stretch;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+.button-switch-text {
+    -fx-text-fill: white;
+}
+
+.top-bar-button {
+    -fx-background-color: #4CAF50; /* Green background */
+    -fx-text-fill: white; /* White text */
+    -fx-font-size: 16px; /* Font size */
+    -fx-font-weight: bold; /* Bold text */
+    -fx-padding: 10px 15px; /* Adjusted padding to allow more text to fit */
+    -fx-border-radius: 30px; /* Rounded corners */
+    -fx-background-radius: 30px; /* Rounded background */
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.0, 0.0, 5); /* Subtle inner shadow */
+    -fx-transition: all 0.3s ease; /* Smooth transition */
+    -fx-min-width: 120px; /* Minimum width to ensure the button is wide enough */
+    -fx-max-width: 300px; /* Maximum width to ensure it doesn't get too wide */
+}
+
+/* Hover state */
+.top-bar-button:hover {
+    -fx-background-color: #45a049; /* Darker green when hovered */
+    -fx-border-color: #388e3c; /* Green border when hovered */
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.0, 0.0, 5); /* Darker shadow */
+}
+
+/* Pressed state */
+.top-bar-button:pressed {
+    -fx-background-color: #388e3c; /* Dark green when pressed */
+    -fx-border-color: #2c6b2f; /* Darker green border when pressed */
+    -fx-effect: none; /* No shadow when pressed */
+}
+
+/* Focus state */
+.top-bar-button:focused {
+    -fx-border-color: #80e27e; /* Light green border on focus */
+    -fx-background-color: #4CAF50; /* Keep the original background color */
+}
+
+/* Disabled state */
+.top-bar-button:disabled {
+    -fx-background-color: #B0BEC5; /* Light grey background when disabled */
+    -fx-text-fill: #607d8b; /* Grey text */
+    -fx-border-color: #B0BEC5; /* Same color for the border */
+    -fx-effect: none; /* No shadow when disabled */
+}
+
+.dropdown-menu {
+    -fx-background-color: #45a049; /* Green background */
+    -fx-text-fill: white; /* White text */
+    -fx-font-size: 16px; /* Font size */
+    -fx-font-weight: bold; /* Bold text */
+    -fx-padding: 5px; /* Padding */
+    -fx-border-radius: 30px; /* Rounded corners */
+    -fx-background-radius: 30px; /* Rounded background */
+    -fx-border-color: #4CAF50; /* Border color */
+    -fx-border-width: 2px; /* Border width */
+    -fx-prompt-text-fill: white; /* Placeholder text color */
+    -fx-min-width: 175px; /* Minimum width */
+    -fx-max-width: 5000px; /* Maximum width */
+}
+
+/* Popup menu */
+.dropdown-menu .list-view {
+    -fx-background-color: #4CAF50; /* Green background for the dropdown */
+    -fx-control-inner-background: #4CAF50; /* Inner background for the list */
+    -fx-text-fill: white; /* White text */
+}
+
+/* List cell (items in the dropdown) */
+.dropdown-menu .list-cell {
+    -fx-background-color: transparent; /* Default background for items */
+    -fx-text-fill: white; /* White text for items */
+}
+
+.dropdown-menu .list-cell:hover {
+    -fx-background-color: #388e3c; /* Dark green on hover */
+}
+
+/* Hover state for ComboBox */
+.dropdown-menu:hover {
+    -fx-background-color: #45a049; /* Darker green when hovered */
+    -fx-border-color: #388e3c; /* Darker green border */
+}
+
+/* Focus state for ComboBox */
+.dropdown-menu:focused {
+    -fx-border-color: #80e27e; /* Light green border on focus */
+    -fx-background-color: #4CAF50; /* Keep the original background color */
+}
+
+/* AMP CONTROLS BY ID */
+#onOff {
+    /*-fx-translate-y: 104px;*/
+    /*-fx-translate-x: 218px;*/
+    -fx-scale-x: 0.65;
+    -fx-scale-y: 1;
+}
+
+#ampBypass {
+    /*-fx-translate-y: 104px;*/
+    /*-fx-translate-x: 62px;*/
+    -fx-scale-x: 0.65;
+    -fx-scale-y: 1;
+}
+
+#ampDiode {
+    /*-fx-translate-y: 100px;*/
+    /*-fx-translate-x: -55px;*/
+    -fx-scale-x: 0.7;
+    -fx-scale-y: 1.3;
+}
+
+#Volume {
+    /*-fx-translate-y: 115px;*/
+    /*-fx-translate-x: -194px;*/
+    -fx-scale-x: 0.51;
+    -fx-scale-y: 0.51;
+}
+
+#High {
+    /*-fx-translate-y: 115px;*/
+    /*-fx-translate-x: -316px;*/
+    -fx-scale-x: 0.53;
+    -fx-scale-y: 0.53;
+}
+
+#Mid {
+    /*-fx-translate-y: 115px;*/
+    /*-fx-translate-x: -430px;*/
+    -fx-scale-x: 0.53;
+    -fx-scale-y: 0.53;
+}
+
+#Bass {
+    /*-fx-translate-y: 115px;*/
+    /*-fx-translate-x: -544px;*/
+    -fx-scale-x: 0.53;
+    -fx-scale-y: 0.53;
+}
+
+#Gain {
+    /*-fx-translate-y: 116px;*/
+    /*-fx-translate-x: -666px;*/
+    -fx-scale-x: 0.52;
+    -fx-scale-y: 0.52;
+}
+
+/* Effects window styling */
+
+.Effects-window {
+    -fx-background-image: url('/pedals.jpg');
+    -fx-background-size: stretch;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.Effects-window .rotatable-circle {
+    -fx-background-image: url("/pedal_knob.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+.Effects-window .controls{
+    -fx-alignment: center;
+    -fx-spacing: 50px;
+    -fx-padding: 0px 0px 0px 0px;
+}
+
+/* EFFECT CONTROLS BY ID */
+.Effects-window #flangerSwitch {
+    /*-fx-translate-y: 95px;*/
+    /*-fx-translate-x: 0px;*/
+    -fx-scale-x: 1;
+    -fx-scale-y: 1.6;
+}
+
+.Effects-window #flangerDiode {
+    /*-fx-translate-y: 90px;*/
+    /*-fx-translate-x: 6px;*/
+    -fx-scale-x: 0.41;
+    -fx-scale-y: 0.67;
+}
+
+.Effects-window #flangerRate {
+    /*-fx-translate-y: 45px;*/
+    /*-fx-translate-x: -72px;*/
+    -fx-scale-x: 0.77;
+    -fx-scale-y: 0.77;
+}
+
+.Effects-window #flangerDepth {
+    /*-fx-translate-y: 45px;*/
+    /*-fx-translate-x: -62px;*/
+    -fx-scale-x: 0.77;
+    -fx-scale-y: 0.77;
+}
+
+.Effects-window #flangerDelay {
+    /*-fx-translate-y: 31px;*/
+    /*-fx-translate-x: -62px;*/
+    -fx-scale-x: 0.77;
+    -fx-scale-y: 0.77;
+}
+
+.Effects-window #flangerWetAmount {
+    /*-fx-translate-y: 31px;*/
+    /*-fx-translate-x: -72px;*/
+    -fx-scale-x: 0.77;
+    -fx-scale-y: 0.77;
+}
+
+.Effects-window #delaySwitch {
+    /*-fx-translate-y: 95px;*/
+    /*-fx-translate-x: 220px;*/
+    -fx-scale-x: 1;
+    -fx-scale-y: 1.6;
+}
+
+.Effects-window #delayDiode {
+    /*-fx-translate-y: 89px;*/
+    /*-fx-translate-x: 226px;*/
+    -fx-scale-x: 0.41;
+    -fx-scale-y: 0.67;
+}
+
+.Effects-window #delayFeedback {
+    /*-fx-translate-y: 30px;*/
+    /*-fx-translate-x: 70px;*/
+    -fx-scale-x: 0.77;
+    -fx-scale-y: 0.77;
+}
+
+.Effects-window #delayRate {
+    /*-fx-translate-y: 43px;*/
+    /*-fx-translate-x: -2px;*/
+    -fx-scale-x: 0.77;
+    -fx-scale-y: 0.77;
+}
+
+.Effects-window #delayWetAmount {
+    /*-fx-translate-y: 43px;*/
+    /*-fx-translate-x: 3px;*/
+    -fx-scale-x: 0.77;
+    -fx-scale-y: 0.77;
+}
+
+.Effects-window #reverbSwitch {
+    /*-fx-translate-y: 91px;*/
+    /*-fx-translate-x: 440px;*/
+    -fx-scale-x: 1;
+    -fx-scale-y: 1.6;
+}
+
+.Effects-window #reverbDiode {
+    /*-fx-translate-y: 90px;*/
+    /*-fx-translate-x: 447px;*/
+    -fx-scale-x: 0.41;
+    -fx-scale-y: 0.67;
+}
+
+.Effects-window #reverbSize {
+    /*-fx-translate-y: 45px;*/
+    /*-fx-translate-x: 61px;*/
+    -fx-scale-x: 0.77;
+    -fx-scale-y: 0.77;
+}
+
+.Effects-window #reverbDamp {
+    /*-fx-translate-y: 31px;*/
+    /*-fx-translate-x: 273px;*/
+    -fx-scale-x: 0.77;
+    -fx-scale-y: 0.77;
+}
+
+.Effects-window #reverbMix {
+    /*-fx-translate-y: 45px;*/
+    /*-fx-translate-x: 65px;*/
+    -fx-scale-x: 0.77;
+    -fx-scale-y: 0.77;
+}
